@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Name Input</title>
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+
+        background: linear-gradient(
+            rgba(255, 255, 255, 0.5),
+            rgba(255, 255, 255, 0.5)
+          ),
+          url("./bg.jpg");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+      }
+      input {
+        padding: 10px;
+        margin: 10px 0;
+        border: 0;
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      button {
+        padding: 10px;
+        background-color: #5da698;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      #startDiv,
+      #option1,
+      #option2 {
+        text-align: center;
+        color: black;
+        padding: 20px;
+        background: rgba(139, 217, 202, 0.47);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5px);
+        -webkit-backdrop-filter: blur(5px);
+        border: 1px solid rgba(139, 217, 202, 0.3);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="startDiv">
+      <div>masukan nama lengkap kamu:</div>
+      <input type="text" id="myText" />
+      <div><button type="button" onclick="myFunction()">enter</button></div>
+    </div>
+
+    <div id="option1" style="display: none">
+      <h1>Hai cewe aku 🥰</h1>
+      <video width="320" height="240" controls autoplay>
+        <source src="./vid.mp4" type="video/mp4" />
+        <source src="./vid.ogg" type="video/ogg" />
+        Your browser does not support the video tag.
+      </video>
+      <img
+        src="https://i.pinimg.com/originals/51/89/bb/5189bb256e50e1934036d6618134239a.gif"
+        style="width: 50%"
+      />
+    </div>
+
+    <div id="option2" style="display: none">
+      <h2>ih kamu siapa ya bukan cewe aku</h2>
+    </div>
+
+    <script>
+      // Here the value is stored in new variable x
+      function myFunction() {
+        let x = document.getElementById("myText").value;
+        var a = document.getElementById("option1");
+        var b = document.getElementById("option2");
+        var c = document.getElementById("startDiv");
+        if (x.toLowerCase() == "femyko") {
+          a.style.display = "block";
+          b.style.display = "none";
+          c.style.display = "none";
+        } else {
+          b.style.display = "block";
+          a.style.display = "none";
+          c.style.display = "none";
+        }
+      }
+    </script>
+  </body>
+</html>
